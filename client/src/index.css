@@ -1,0 +1,111 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-primary-border: hsl(var(--primary-border));
+  --color-accent-border: hsl(var(--accent-border));
+  --color-card-border: hsl(var(--card-border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+}
+
+:root {
+  --background: 38 40% 95%;
+  --foreground: 240 10% 10%;
+  
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 10%;
+  
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 10%;
+  
+  --primary: 240 10% 10%;
+  --primary-foreground: 0 0% 100%;
+  
+  --secondary: 240 5% 90%;
+  --secondary-foreground: 240 10% 10%;
+  
+  --muted: 240 5% 90%;
+  --muted-foreground: 240 5% 40%;
+  
+  --accent: 240 5% 90%;
+  --accent-foreground: 240 10% 10%;
+  
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  
+  --border: 240 5% 90%;
+  --input: 240 5% 90%;
+  --ring: 240 10% 10%;
+  
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 240 10% 10%;
+  --foreground: 0 0% 98%;
+  
+  --card: 240 10% 15%;
+  --card-foreground: 0 0% 98%;
+  
+  --popover: 240 10% 15%;
+  --popover-foreground: 0 0% 98%;
+  
+  --primary: 0 0% 98%;
+  --primary-foreground: 240 10% 10%;
+  
+  --secondary: 240 10% 20%;
+  --secondary-foreground: 0 0% 98%;
+  
+  --muted: 240 10% 20%;
+  --muted-foreground: 240 5% 60%;
+  
+  --accent: 240 10% 20%;
+  --accent-foreground: 0 0% 98%;
+  
+  --destructive: 0 62% 30%;
+  --destructive-foreground: 0 0% 98%;
+  
+  --border: 240 10% 20%;
+  --input: 240 10% 20%;
+  --ring: 240 5% 80%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply font-serif antialiased bg-background text-foreground;
+  }
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
