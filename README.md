@@ -2,7 +2,9 @@
 
 A personal book tracking app curated by Dreameryanyan — featuring iOS-style horizontal scrolling shelves, colored acrylic panel overlays, and Playfair Display serif typography throughout.
 
-![Bookboard](https://covers.openlibrary.org/b/id/8294078-M.jpg)
+![Bookboard](screenshots/bookboard-main.png)
+
+![Add Book](screenshots/bookboard-add.png)
 
 ## Features
 
